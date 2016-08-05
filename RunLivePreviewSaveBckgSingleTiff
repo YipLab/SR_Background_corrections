@@ -1,0 +1,6 @@
+DataFolder=${PWD}
+cd ~/image_store/Scripts/PythonSrc/
+rm -f PreviewSaveBckGrndSingleTiff.NoHup
+python PyPreviewSaveBckGrndSingleTiffConfig.py $DataFolder
+#python -i PyPreviewSaveBckGrndSingleTiff.py $DataFolder
+nohup python PyPreviewSaveBckGrndSingleTiff.py $DataFolder > PreviewSaveBckGrndSingleTiff.NoHup&

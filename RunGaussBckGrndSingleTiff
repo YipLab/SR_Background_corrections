@@ -1,0 +1,17 @@
+DataFolder=${PWD}
+#cd ~/image_store/Scripts/PythonSrc/
+#rm -f PreviewSaveBckGrndSingleTiff.NoHup
+#python PyGaussBckGrndSingleTiffConfig.py $DataFolder
+#python -i PyGaussBckGrndSingleTiff.py $DataFolder
+#nohup python PyGaussBckGrndSingleTiff.py $DataFolder > PyGaussBckGrndSingleTiffSingleTiff.NoHup&
+DataFolder=${PWD}
+NameScript="PyGaussBckGrndSingleTiff"
+NameScriptPy=$NameScript".py"
+NameScriptCfg=$NameScript"Config.py"
+cd ~/image_store/Scripts/PythonSrc/
+NoHupFile=$DataFolder"/"$NameScript".NoHup"
+#echo "$NoHupFile"
+rm -f $NoHupFile
+python $NameScriptCfg $DataFolder
+#python -i $NameScriptPy $DataFolder
+nohup python $NameScriptPy $DataFolder > $NoHupFile&

@@ -1,0 +1,5 @@
+DataFolder=${PWD}
+cd ~/image_store/Scripts/PythonSrc/
+python PyPreviewSaveBckGrndConfig.py $DataFolder
+#python -i PyPreview.py $DataFolder	
+nohup python PyPreviewSaveBckGrnd.py $DataFolder&

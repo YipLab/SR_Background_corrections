@@ -1,0 +1,12 @@
+DataFolder=${PWD}
+#echo $DataFolder
+NameScript="PyPreviewTempMedGaussBckGrndSingleTiff"
+NameScriptPy=$NameScript".py"
+NameScriptCfg=$NameScript"Config.py"
+cd ~/image_store/Scripts/PythonSrc/
+NoHupFile=$DataFolder"/"$NameScript".NoHup"
+#echo "$NoHupFile"
+rm -f $NoHupFile
+python $NameScriptCfg $DataFolder
+#python -i $NameScriptPy $DataFolder
+nohup python $NameScriptPy $DataFolder > $NoHupFile&
